@@ -1,0 +1,32 @@
+/**index.wxss**/
+/* 照相机部分 */
+.camera{
+  width: 100vw;
+  height: 40vh;
+}
+/* IP地址和端口号的获取部分 */
+.url{
+  background-color: green;
+}
+.view-btn{
+  display: flex;  
+  flex-direction: row;  
+}  
+
+/* 表情值输出部分 */
+.output{ 
+  display: flex;  
+  flex-direction: column;
+  background-color: white;  
+}
+.view-text{
+  width: 15%;
+}
+.view-progress{
+  width: 85%;
+}
+.view-face{
+  display: flex;  
+  /* 横向分布 */
+  flex-direction: row;  
+} 

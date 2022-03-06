@@ -1,0 +1,86 @@
+<!-- index.wxml -->
+<!-- deepface -->
+<view>
+  <!-- 摄像机 -->
+  <view class="camera">
+    <camera device-position="front" flash="off" binderror="error" style="width: 100%; height: 100%;"></camera>
+  </view>
+  <!-- IP地址和端口号的输入获取 -->
+  <form bindsubmit='submit'>
+    <text class='login-title'>网址或者IP地址：{{ip}}</text>
+    <input type='text' name='ip' placeholder="请输入网址或者IP地址！" value='{{ip}}'></input>
+    <text class='login-title'>端口号：{{host}}</text>
+    <input type='text' name='host' placeholder="请输入':'+端口号！" value='{{host}}'></input>
+    <view class='view-btn'>
+      <button formType="submit" type='primary' size="mini">确定</button>
+      <button formType="reset" type='primary' size="mini" bindtap='reset'>重置</button>
+    </view>
+  </form>
+
+  <!-- 表情值输出 -->
+  <view class="output">
+    <!-- 中立 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >中立</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{neutral}}" color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 高兴 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >高兴</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{happy}}" color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 厌恶 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >厌恶</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{disgust}}" color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 害怕 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >害怕</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{fear}}" color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 伤心 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >伤心</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{sad}}" color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 惊喜 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >惊喜</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{surprise}}" color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 生气 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >生气</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{angry}}" color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+  </view>
+</view>
